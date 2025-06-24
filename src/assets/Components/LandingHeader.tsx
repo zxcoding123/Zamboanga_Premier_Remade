@@ -1,10 +1,8 @@
 
 import { Mail, LibraryBig } from 'lucide-react';
 import Magnet from '../../blocks/Animations/Magnet/Magnet'
-import DecryptedText from '../../blocks/TextAnimations/DecryptedText/DecryptedText';
 import AnimatedContent from '../../blocks/Animations/AnimatedContent/AnimatedContent';
 import Inage from '../Images/Image-New.avif';
-import Iridescence from '../../blocks/Backgrounds/Iridescence/Iridescence';
 import CountUp from '../../blocks/TextAnimations/CountUp/CountUp'
 
 
