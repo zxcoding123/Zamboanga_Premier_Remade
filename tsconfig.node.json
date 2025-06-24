@@ -7,7 +7,7 @@
     "moduleResolution": "bundler",
     "allowJs": true,
     "outDir": "dist",
-    "composite": true, // Enable composite for project references
+    "composite": false, // Enable composite for project references
     "noEmit": false, // Allow emission (remove or set to false)
     "strict": true,
     "esModuleInterop": true
