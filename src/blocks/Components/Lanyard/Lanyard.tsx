@@ -3,6 +3,8 @@
 */
 
 /* eslint-disable react/no-unknown-property */
+
+
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
@@ -19,20 +21,32 @@ import {
   RigidBody,
   useRopeJoint,
   useSphericalJoint,
-  RigidBodyProps,
+} from "@react-three/rapier";
+import type {
+  RigidBodyProps
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
-
 // replace with your own imports, see the usage snippet for details
 import cardGLB from "./card.glb"; // ✅ Correct extension
 import lanyard from "./lanyard.png";
-
 import "./Lanyard.css";
+import { forwardRef } from 'react';
+extend({ MeshLineGeometry, MeshLineMaterial });
 
-console.log("cardGLB path:", cardGLB);
+// Create a React component wrapper for MeshLineGeometry
+const MeshLineGeometryWrapper = forwardRef<MeshLineGeometry>((props, ref) => {
+  return <meshLineGeometry ref={ref} {...props} />;
+});
+
+// Create a React component wrapper for MeshLineMaterial
+const MeshLineMaterialWrapper = forwardRef<MeshLineMaterial>((props, ref) => {
+  return <meshLineMaterial ref={ref} {...props} />;
+});
+
 
 extend({ MeshLineGeometry, MeshLineMaterial });
+
 
 interface LanyardProps {
   position?: [number, number, number];
